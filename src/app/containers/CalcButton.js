@@ -38,16 +38,30 @@ const CalcButton = ({value}) => {
     const numberString = value.toString();
     let numberValue;
     if(numberString === 0 && calc.num ===0){
-      numberValue = 0;
+      setCalc(
+        {
+          ...calc,
+          num: 0,
+        }
+        );
+    }else if(calc.num===0 && calc.res !== 0 && calc.sign==''){
+      setCalc(
+        {
+          ...calc,
+          num: value,
+          res: 0,
+        }
+        );
     }else{
       numberValue = Number(calc.num + numberString);
+      setCalc(
+        {
+          ...calc,
+          num: numberValue,
+        }
+        );
     }
-    setCalc(
-    {
-      ...calc,
-      num: numberValue,
-    }
-    );
+  
   }
 
   const optClick = () =>{

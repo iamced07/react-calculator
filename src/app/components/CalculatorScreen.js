@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import AutoScaleScreen from "../containers/AutoScaleScreen";
+import { CalcContext } from "../context/CalculatorContext";
 
 const CalculatorScreen = () => {
 
