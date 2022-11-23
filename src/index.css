@@ -1,8 +1,5 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  margin: 0;
 }
 
 *{
@@ -11,26 +8,37 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 320px;
+  height: 520px;
+  position: relative;
+}
+
 .wrapper {
-  background: #242424;
-  width: 22rem;
-  padding: 2rem;
-  margin-top: 4rem;
-  border-radius: 1rem;
-  box-shadow: 0px 9px 15px -3px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .screen{
-  height: 4rem;
-  margin-bottom: 4rem;
-  padding: 16px 4px 16px 0;
-  font-size: 22px;
-  font-weight: 300;
-  border-radius: 4px;
-  background-color: #CDE3D9;
-  color: black;
-  text-align: right;
-  
+    color: #1c191c;
+    background: white;
+    line-height: 90px;
+    font-size: 4em;
+    padding: 16px 4px 16px 0;
+    flex: 1;  
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
 .calculatorBox{
@@ -43,7 +51,7 @@ body {
   background-color: #e9f0f4;
   height: 3.5rem;
   padding: 10px;
-  border-radius: 10000px;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +70,13 @@ body {
 
 .opt {
   background-color: orange;
+}
 
+.screen .auto-scaling-text {
+  padding: 0 30px;
+  position: absolute;
+  right: 5px;
+  transform-origin: right;
 }
 
 .auto-scaling-text {

@@ -13,17 +13,23 @@ function App() {
     ["1", "2", "3", "+"],
     ["0", ".", "="],
   ];
-  return ( 
-    <CalculatorProvider>
-      <Wrapper>
-        <CalculatorScreen />
-        <CalculatorBox>
-          {calculatorButtons.flat().map((btn, i) => {
-            return <CalcButton value={btn} key={i} />;
-          })}
-        </CalculatorBox>
-      </Wrapper>
+  return (
+<CalculatorProvider>
+    <div className="container">
+      <div className="content">
+        <Wrapper>
+          <CalculatorScreen />
+          <CalculatorBox>
+            {calculatorButtons.flat().map((btn, i) => {
+              return <CalcButton value={btn} key={i} />;
+            })}
+          </CalculatorBox>
+        </Wrapper>
+      </div>
+  
+    </div>
     </CalculatorProvider>
+    
   );
 }
 

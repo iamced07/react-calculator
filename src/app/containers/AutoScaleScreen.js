@@ -13,14 +13,14 @@ const AutoScaleScreen = ({children}) => {
         const actualScale = availableWidth / actualWidth
         
         if (scale === actualScale)
-          return
+          return;
         
         if (actualScale < 1) {
             setScale(actualScale);
         } else if (scale < 1) {
             setScale(1);
         }
-    },[scale]);
+    },[children]);
 
   return (
     <div
